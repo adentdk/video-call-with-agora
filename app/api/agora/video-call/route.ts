@@ -39,6 +39,6 @@ export const POST = async (req: NextRequest) => {
   })
 
   return Response.json({
-    url: `http://localhost:3000?${queryString}`
+    url: `${process.env.APP_URL}?${queryString}`
   })
 }
