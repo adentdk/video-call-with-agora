@@ -35,7 +35,8 @@ export const POST = async (req: NextRequest) => {
 
   const queryString = stringify({
     channelName,
-    token
+    token,
+    uid
   })
 
   return Response.json({
