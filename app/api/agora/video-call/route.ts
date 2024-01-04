@@ -1,4 +1,4 @@
-import { RtcTokenBuilder, RtmTokenBuilder, RtcRole } from 'agora-token'
+import { RtcTokenBuilder, RtcRole } from 'agora-token'
 import { NextRequest } from 'next/server';
 import { stringify } from 'querystring';
 
