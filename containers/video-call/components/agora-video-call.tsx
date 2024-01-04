@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 import { useAgoraVideoCallContext } from '../context';
 import { useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { RtcPropsInterface } from 'agora-react-uikit';
+import { RtcPropsInterface, layout } from 'agora-react-uikit';
 
 const AgoraUIKit = dynamic(
   () => import('agora-react-uikit'),
@@ -46,7 +46,11 @@ const AgoraVideoCall = () => {
   };
 
   return (
-    <AgoraUIKit rtcProps={rtcProps} />
+    <AgoraUIKit rtcProps={rtcProps} callbacks={{
+      EndCall: () => {
+        window.close();
+      },
+    }} />
   )
 };
 
